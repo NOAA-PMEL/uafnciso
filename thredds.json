@@ -1,0 +1,15 @@
+{
+	identifier: 'id',
+	label: 'name',
+	items: [
+	      { id: '0.ROOT', name:'ROOT', type:'level0',
+	             children:[{_reference:'1.thredds'}] },
+	          { id: '1.thredds', name:'thredds', type:'level1',
+	                 children:[{_reference:'1.dodsC'}] },
+	              { id: '1.dodsC', name:'dodsC', type:'level2',
+	                     children:[{_reference:'1.ct_flux_NCML.xml'},{_reference:'1.ct_flux_REPORT.html'},{_reference:'1.ct_flux_ISO.xml'}] },
+	                  { id: '1.ct_flux_NCML.xml', name:'ct_flux_NCML.xml', urlSrc: 'thredds/dodsC/ct_flux_NCML.xml', type:'level3' },
+	                  { id: '1.ct_flux_REPORT.html', name:'ct_flux_REPORT.html', urlSrc: 'thredds/dodsC/ct_flux_REPORT.html', type:'level3' },
+	                  { id: '1.ct_flux_ISO.xml', name:'ct_flux_ISO.xml', urlSrc: 'thredds/dodsC/ct_flux_ISO.xml', type:'level3' }
+
+]}
