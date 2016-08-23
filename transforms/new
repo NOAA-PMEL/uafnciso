@@ -692,16 +692,6 @@
             </xsl:otherwise>
           </xsl:choose>
         </xsl:variable>  	
-		<xsl:variable name="metadataModifiedDateCnt">
-          <xsl:choose>            
-            <xsl:when test="count(/nc:netcdf/nc:attribute[@name='metadata_date_modified']) > 0">
-              <xsl:value-of select="count(/nc:netcdf/nc:attribute[@name='metadata_date_modified'])"/>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:value-of select="count(/nc:netcdf/nc:group[@name='THREDDSMetadata']/nc:group[@name='dates']/nc:attribute[@type='modified'])"/>
-            </xsl:otherwise>
-          </xsl:choose>
-        </xsl:variable>  	
 		<xsl:variable name="issuedDateCnt">
           <xsl:choose>            
             <xsl:when test="count(/nc:netcdf/nc:attribute[@name='date_issued']) > 0">
@@ -800,7 +790,7 @@
             </xsl:otherwise>
           </xsl:choose>
         </xsl:variable>         
-	<xsl:variable name="publisherEmailCnt">
+		<xsl:variable name="publisherEmailCnt">
           <xsl:choose>            
             <xsl:when test="count(/nc:netcdf/nc:attribute[@name='publisher_email']) > 0">
               <xsl:value-of select="count(/nc:netcdf/nc:attribute[@name='publisher_email'])"/>
@@ -810,105 +800,19 @@
             </xsl:otherwise>
           </xsl:choose>
         </xsl:variable>         
-	<xsl:variable name="publisherTypeCnt">
-          <xsl:choose>            
-            <xsl:when test="count(/nc:netcdf/nc:attribute[@name='publisher_type']) > 0">
-              <xsl:value-of select="count(/nc:netcdf/nc:attribute[@name='publisher_type'])"/>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:value-of select="count(/nc:netcdf/nc:group[@name='THREDDSMetadata']/nc:group[@name='publishers']/nc:group[@name='publisher']/nc:attribute[@type='type'])"/>
-            </xsl:otherwise>
-          </xsl:choose>
-        </xsl:variable>         
-	<xsl:variable name="publisherInstCnt">
-          <xsl:choose>            
-            <xsl:when test="count(/nc:netcdf/nc:attribute[@name='publisher_institution']) > 0">
-              <xsl:value-of select="count(/nc:netcdf/nc:attribute[@name='publisher_institution'])"/>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:value-of select="count(/nc:netcdf/nc:group[@name='THREDDSMetadata']/nc:group[@name='publishers']/nc:group[@name='publisher']/nc:attribute[@type='institution'])"/>
-            </xsl:otherwise>
-          </xsl:choose>
-        </xsl:variable>         
 		<xsl:variable name="publisherTotal" select="$publisherNameCnt + $publisherURLCnt + $publisherEmailCnt"/>
 		<xsl:variable name="publisherMax">3</xsl:variable>
 		<!--  -->
 		<xsl:variable name="responsiblePartyTotal" select="$creatorTotal + $contributorTotal + $publisherTotal"/>
 		<xsl:variable name="responsiblePartyMax">16</xsl:variable>
 		<!-- Other Fields: 2 possible -->
-         <xsl:variable name="cdmTypeCnt">
+		<xsl:variable name="cdmTypeCnt">
           <xsl:choose>            
             <xsl:when test="count(/nc:netcdf/nc:attribute[@name='cdm_data_type']) > 0">
               <xsl:value-of select="count(/nc:netcdf/nc:attribute[@name='cdm_data_type'])"/>
             </xsl:when>
             <xsl:otherwise>
               <xsl:value-of select="count(/nc:netcdf/nc:group[@name='THREDDSMetadata']/nc:attribute[@name='data_type'])"/>
-            </xsl:otherwise>
-          </xsl:choose>
-        </xsl:variable>   
-         <xsl:variable name="productVersionCnt">
-          <xsl:choose>            
-            <xsl:when test="count(/nc:netcdf/nc:attribute[@name='product_version']) > 0">
-              <xsl:value-of select="count(/nc:netcdf/nc:attribute[@name='product_version'])"/>
-            </xsl:when>
-            <xsl:otherwise>
-              <!-- This will never happen AFAIK -->
-              <xsl:value-of select="count(/nc:netcdf/nc:group[@name='THREDDSMetadata']/nc:attribute[@name='product_version'])"/>
-            </xsl:otherwise>
-          </xsl:choose>
-        </xsl:variable>   
-         <xsl:variable name="referencesCnt">
-          <xsl:choose>            
-            <xsl:when test="count(/nc:netcdf/nc:attribute[@name='references']) > 0">
-              <xsl:value-of select="count(/nc:netcdf/nc:attribute[@name='references'])"/>
-            </xsl:when>
-            <xsl:otherwise>
-              <!-- This will never happen AFAIK -->
-              <xsl:value-of select="count(/nc:netcdf/nc:group[@name='THREDDSMetadata']/nc:attribute[@name='references'])"/>
-            </xsl:otherwise>
-          </xsl:choose>
-        </xsl:variable>   
-         <xsl:variable name="programCnt">
-          <xsl:choose>            
-            <xsl:when test="count(/nc:netcdf/nc:attribute[@name='program']) > 0">
-              <xsl:value-of select="count(/nc:netcdf/nc:attribute[@name='program'])"/>
-            </xsl:when>
-            <xsl:otherwise>
-              <!-- This will never happen AFAIK -->
-              <xsl:value-of select="count(/nc:netcdf/nc:group[@name='THREDDSMetadata']/nc:attribute[@name='program'])"/>
-            </xsl:otherwise>
-          </xsl:choose>
-        </xsl:variable>   
-         <xsl:variable name="instrumentTypeCnt">
-          <xsl:choose>            
-            <xsl:when test="count(/nc:netcdf/nc:attribute[@name='instrument_type']) > 0">
-              <xsl:value-of select="count(/nc:netcdf/nc:attribute[@name='instrument_type'])"/>
-            </xsl:when>
-            <xsl:otherwise>
-              <!-- This will never happen AFAIK -->
-              <xsl:value-of select="count(/nc:netcdf/nc:group[@name='THREDDSMetadata']/nc:attribute[@name='instrument_type'])"/>
-            </xsl:otherwise>
-          </xsl:choose>
-        </xsl:variable>   
-         <xsl:variable name="instrumentVocabCnt">
-          <xsl:choose>            
-            <xsl:when test="count(/nc:netcdf/nc:attribute[@name='instrument_vocabulary']) > 0">
-              <xsl:value-of select="count(/nc:netcdf/nc:attribute[@name='instrument_vocabulary'])"/>
-            </xsl:when>
-            <xsl:otherwise>
-              <!-- This will never happen AFAIK -->
-              <xsl:value-of select="count(/nc:netcdf/nc:group[@name='THREDDSMetadata']/nc:attribute[@name='instrument_vocabularty'])"/>
-            </xsl:otherwise>
-          </xsl:choose>
-        </xsl:variable>   
-         <xsl:variable name="platformCnt">
-          <xsl:choose>            
-            <xsl:when test="count(/nc:netcdf/nc:attribute[@name='platform']) > 0">
-              <xsl:value-of select="count(/nc:netcdf/nc:attribute[@name='platform'])"/>
-            </xsl:when>
-            <xsl:otherwise>
-              <!-- This will never happen AFAIK -->
-              <xsl:value-of select="count(/nc:netcdf/nc:group[@name='THREDDSMetadata']/nc:attribute[@name='platform'])"/>
             </xsl:otherwise>
           </xsl:choose>
         </xsl:variable>   
@@ -929,27 +833,10 @@
             </xsl:otherwise>
           </xsl:choose>
         </xsl:variable>        	
-		<xsl:variable name="sourceCnt">
-          <xsl:choose>            
-            <xsl:when test="count(/nc:netcdf/nc:attribute[@name='source']) > 0">
-              <xsl:value-of select="count(/nc:netcdf/nc:attribute[@name='source'])"/>
-            </xsl:when>
-            <xsl:otherwise>
-		      <xsl:choose>            
-                <xsl:when test="count(/nc:netcdf/nc:group[@name='THREDDSMetadata']/nc:group[@name='documentation']/nc:group[@name='document']/nc:attribute[@type='source']) > 0">
-                  <xsl:value-of select="1"/>
-                </xsl:when>
-                <xsl:otherwise>
-                  <xsl:value-of select="0"/>
-                </xsl:otherwise>
-              </xsl:choose>
-            </xsl:otherwise>
-          </xsl:choose>
-        </xsl:variable>        	
 		<xsl:variable name="licenseCnt">
           <xsl:choose>            
             <xsl:when test="count(/nc:netcdf/nc:attribute[@name='license']) > 0">
-              <xsl:value-of select="count(/nc:netcdf/nc:attribute[@name='license'])"/>
+              <xsl:value-of select="count(/nc:netcdf/nc:attribute[@name='processing_level'])"/>
             </xsl:when>
             <xsl:otherwise>
 		      <xsl:choose>            
@@ -971,8 +858,7 @@
 		<!-- Display Results Fields -->
 		<html>
                         <head>
-                            <!-- Latest compiled and minified CSS -->
-                            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+                           <link rel="stylesheet" type="text/css" href="/home/rhs/bootstrap-3.3.6-dist/css/bootstrap.min.css"/>
 			   <style type="text/css">
 				   table {
 				       empty-cells:show;
@@ -1691,7 +1577,7 @@
 				<tr class="report">
 					<xsl:call-template name="showScore">
                                                 <!-- fix me -->
-						<xsl:with-param name="score" select="$metadataModifiedDateCnt"/>
+						<xsl:with-param name="score" select="$modifiedDateCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
 						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#date_metadata_modified_Attribute">date_metadata_modified</a>
@@ -1810,7 +1696,7 @@ and/or<br/>
 				<tr class="report">
 					<xsl:call-template name="showScore">
                                                 <!-- fix me-->
-						<xsl:with-param name="score" select="$publisherTypeCnt"/>
+						<xsl:with-param name="score" select="$publisherEmailCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
 						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#publisher_type_Attribute">publisher_type</a>
@@ -1823,7 +1709,7 @@ and/or<br/>
 				<tr class="report">
 					<xsl:call-template name="showScore">
                                                 <!-- fix me-->
-						<xsl:with-param name="score" select="$publisherInstCnt"/>
+						<xsl:with-param name="score" select="$publisherEmailCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
 						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#publisher_institution_Attribute">publisher_institution</a>
@@ -1872,7 +1758,7 @@ and/or<br/>
 				<tr class="report">
 					<xsl:call-template name="showScore">
                                                 <!-- fix me -->
-						<xsl:with-param name="score" select="$sourceCnt"/>
+						<xsl:with-param name="score" select="$licenseCnt"/>
 					</xsl:call-template>
 					<td class="report alert alert-info" valign="top">
 						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#source_Attribute">source</a>
@@ -1897,7 +1783,7 @@ and/or<br/>
 				<tr class="report">
 					<xsl:call-template name="showScore">
                                                 <!-- fix me -->
-						<xsl:with-param name="score" select="$instrumentTypeCnt"/>
+						<xsl:with-param name="score" select="$cdmTypeCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
 						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#instrument_type_Attribute">instrument</a>
@@ -1910,7 +1796,7 @@ and/or<br/>
 				<tr class="report">
 					<xsl:call-template name="showScore">
                                                 <!-- fix me -->
-						<xsl:with-param name="score" select="$instrumentVocabCnt"/>
+						<xsl:with-param name="score" select="$cdmTypeCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
 						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#instrument_vocabulary_Attribute">instrument_vocabulary</a>
@@ -1923,7 +1809,7 @@ and/or<br/>
 				<tr class="report">
 					<xsl:call-template name="showScore">
                                                 <!-- fix me -->
-						<xsl:with-param name="score" select="$platformCnt"/>
+						<xsl:with-param name="score" select="$cdmTypeCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
 						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#platform_Attribute">platform</a>
@@ -1936,7 +1822,7 @@ and/or<br/>
 				<tr class="report">
 					<xsl:call-template name="showScore">
                                                 <!-- fix me -->
-						<xsl:with-param name="score" select="$productVersionCnt"/>
+						<xsl:with-param name="score" select="$cdmTypeCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
 						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#product_version_Attribute">product_version</a>
@@ -1949,7 +1835,7 @@ and/or<br/>
 				<tr class="report">
 					<xsl:call-template name="showScore">
                                                 <!-- fix me -->
-						<xsl:with-param name="score" select="$programCnt"/>
+						<xsl:with-param name="score" select="$cdmTypeCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
 						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#program_Attribute">program</a>
@@ -1962,7 +1848,7 @@ and/or<br/>
 				<tr class="report">
 					<xsl:call-template name="showScore">
                                                 <!-- fix me -->
-						<xsl:with-param name="score" select="$referencesCnt"/>
+						<xsl:with-param name="score" select="$cdmTypeCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
 						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#references_Attribute">references</a>
