@@ -1149,7 +1149,7 @@
 						<xsl:with-param name="score" select="$idCnt"/>
 					</xsl:call-template>
 					<td class="report alert alert-info" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#id_Attribute">id</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#id">id</a>
 						<br/>
 					</td>
 					<td class="report alert alert-info" rowspan="2" valign="top">The combination of the "naming authority" and the "id" should be a globally unique identifier for the dataset.<br/>
@@ -1162,7 +1162,7 @@
 						<xsl:with-param name="score" select="$identifierNameSpaceCnt"/>
 					</xsl:call-template>
 					<td class="report alert alert-info" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#naming_authority_Attribute">naming_authority</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#naming_authority">naming_authority</a>
 						<br/>
 					</td>
 					<td class="report alert alert-info" valign="top"/>
@@ -1207,7 +1207,7 @@
 						<xsl:with-param name="score" select="$titleCnt"/>
 					</xsl:call-template>
 					<td class="report alert alert-info" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#title_Attribute"><strong>title</strong></a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#title"><strong>title</strong></a>
 						<br/>
 					</td>
 					<td class="report alert alert-info" valign="top"><strong>A short description of the dataset.</strong><br/></td>
@@ -1220,7 +1220,7 @@
 					</xsl:call-template>
 					<td class="report alert alert-info" valign="top">
                                                 <strong>
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#summary_Attribute">summary</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#summary">summary</a>
                                                 </strong>
 						<br/>
 					</td>
@@ -1236,7 +1236,7 @@
 						<xsl:with-param name="score" select="$keywordsCnt"/>
 					</xsl:call-template>
 					<td class="report alert alert-info" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#keywords_Attribute"><strong>keywords</strong></a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#keywords"><strong>keywords</strong></a>
 						<br/>
 					</td>
 					<td class="report alert alert-info" valign="top"><strong>A comma separated list of key words and phrases.</strong><br/>
@@ -1251,7 +1251,7 @@
 						<xsl:with-param name="score" select="$stdNameVocabCnt"/>
 					</xsl:call-template>
 					<td class="report alert alert-info" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#standard_name_vocabulary_Attribute">standard_name_vocabulary</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#standard_name_vocabulary">standard_name_vocabulary</a>
 						<br/>
 					</td>
 					<td class="report alert alert-info" valign="top">The name of the controlled vocabulary from which variable standard names are taken.<br/>
@@ -1264,7 +1264,7 @@
 						<xsl:with-param name="score" select="$historyCnt"/>
 					</xsl:call-template>
 					<td class="report alert alert-info" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#history_Attribute">history</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#history">history</a>
 						<br/>
 					</td>
 					<td class="report alert alert-info" valign="top">Provides an audit trail for modifications to the original data.</td>
@@ -1276,7 +1276,7 @@
 						<xsl:with-param name="score" select="$commentCnt"/>
 					</xsl:call-template>
 					<td class="report alert alert-info" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#comment_Attribute">comment</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#comment">comment</a>
 						<br/>
 					</td>
 					<td class="report alert alert-info" valign="top">Miscellaneous information about the data.</td>
@@ -1290,7 +1290,7 @@
 						<xsl:with-param name="score" select="$keywordsVocabCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#keywords_vocabulary_Attribute">keywords_vocabulary</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#keywords_vocabulary">keywords_vocabulary</a>
 						<br/>
 					</td>
 					<td class="report" valign="top">If you are following a guideline for the words/phrases in your "keywords" attribute, put the name of that guideline here.<br/>
@@ -1319,11 +1319,11 @@
 						<xsl:with-param name="score" select="$geospatial_lat_minCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#geospatial_lat_min_Attribute">geospatial_lat_min</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#geospatial_lat_min">geospatial_lat_min</a>
 						<br/>
 					</td>
 					<td class="report" rowspan="13" colspan="1" valign="top">Describes a simple latitude, longitude, vertical and temporal bounding box. For a more detailed geospatial coverage, see the <a
-							href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#suggested_geospatial">suggested geospatial attributes</a>.<br/> Further refinement of the geospatial bounding box can
+							href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#suggested_geospatial">suggested geospatial attributes</a>.<br/> Further refinement of the geospatial bounding box can
 						be provided by using these units and resolution attributes.<br/>
 					</td>
 					<td class="report" valign="top">metadata/geospatialCoverage/northsouth/start<br/></td>
@@ -1334,7 +1334,7 @@
 						<xsl:with-param name="score" select="$geospatial_lat_maxCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#geospatial_lat_max_Attribute">geospatial_lat_max</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#geospatial_lat_max">geospatial_lat_max</a>
 					</td>
 					<td class="report" valign="top">metadata/geospatialCoverage/northsouth/size</td>
 					<td class="report" valign="top">/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:northBoundLatitude/gco:Decimal<br/></td>
@@ -1344,7 +1344,7 @@
 						<xsl:with-param name="score" select="$geospatial_lon_minCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#geospatial_lon_min_Attribute">geospatial_lon_min</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#geospatial_lon_min">geospatial_lon_min</a>
 					</td>
 					<td class="report" valign="top">metadata/geospatialCoverage/eastwest/start</td>
 					<td class="report" valign="top">/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:westBoundLongitude/gco:Decimal<br/></td>
@@ -1354,7 +1354,7 @@
 						<xsl:with-param name="score" select="$geospatial_lon_maxCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#geospatial_lon_max_Attribute">geospatial_lon_max</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#geospatial_lon_max">geospatial_lon_max</a>
 					</td>
 					<td class="report" valign="top">metadata/geospatialCoverage/eastwest/size</td>
 					<td class="report" valign="top">/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:eastBoundLongitude/gco:Decimal<br/></td>
@@ -1364,7 +1364,7 @@
 						<xsl:with-param name="score" select="$timeStartCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#time_coverage_start_Attribute">time_coverage_start</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#time_coverage_start">time_coverage_start</a>
 					</td>
 					<td class="report" valign="top">metadata/timeCoverage/start</td>
 					<td class="report" valign="top">/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/gml:beginPosition</td>
@@ -1374,7 +1374,7 @@
 						<xsl:with-param name="score" select="$timeEndCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#time_coverage_end_Attribute">time_coverage_end</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#time_coverage_end">time_coverage_end</a>
 					</td>
 					<td class="report" valign="top">metadata/timeCoverage/end</td>
 					<td class="report" valign="top">/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/gml:endPosition</td>
@@ -1384,7 +1384,7 @@
 						<xsl:with-param name="score" select="$vertical_minCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#geospatial_vertical_min_Attribute">geospatial_vertical_min</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#geospatial_vertical_min">geospatial_vertical_min</a>
 						<br/>
 					</td>
 					<td class="report" valign="top">metadata/geospatialCoverage/updown/start</td>
@@ -1395,7 +1395,7 @@
 						<xsl:with-param name="score" select="$vertical_maxCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#geospatial_vertical_max_Attribute">geospatial_vertical_max</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#geospatial_vertical_max">geospatial_vertical_max</a>
 					</td>
 					<td class="report" valign="top">metadata/geospatialCoverage/updown/size</td>
 					<td class="report" valign="top">/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:verticalElement/gmd:EX_VerticalExtent/gmd:maximumValue/gco:Real</td>
@@ -1456,7 +1456,7 @@
 						<xsl:with-param name="score" select="$timeDurCnt"/>
 					</xsl:call-template>
 					<td class="report alert alert-info" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#time_coverage_duration_Attribute">time_coverage_duration</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#time_coverage_duration">time_coverage_duration</a>
 					</td>
 					<td class="report alert alert-info" valign="top">Describes the duration of the data set. Use ISO 8601:2004 duration format, preferably the extended format.</td>
 					<td class="report alert alert-info" valign="top">metadata/timeCoverage/duration</td>
@@ -1468,7 +1468,7 @@
 						<xsl:with-param name="score" select="$timeResCnt"/>
 					</xsl:call-template>
 					<td class="report alert alert-info" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#time_coverage_resolution_Attribute">time_coverage_resolution</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#time_coverage_resolution">time_coverage_resolution</a>
 					</td>
                                         <td class="report alert alert-info">Describes the targeted time period between each value in the data set. Use ISO 8601:2004 duration format.</td>
 					<td class="report alert alert-info" valign="top">metadata/timeCoverage/resolution</td>
@@ -1479,7 +1479,7 @@
 						<xsl:with-param name="score" select="$geospatial_lon_unitsCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#geospatial_lon_units_Attribute">geospatial_lon_units</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#geospatial_lon_units">geospatial_lon_units</a>
 						<br/>
 					</td>
                                         <td class="report alert alert-info">Units for the longitude axis described in "geospatial_lon_min" and "geospatial_lon_max" attributes. These are presumed to be "degree_east"; other options from udunits may be specified instead.</td>
@@ -1491,7 +1491,7 @@
 						<xsl:with-param name="score" select="$geospatial_lon_resolutionCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#geospatial_lon_resolution_Attribute">geospatial_lon_resolution</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#geospatial_lon_resolution">geospatial_lon_resolution</a>
 					</td>
                                         <td class="report alert alert-info">Information about the targeted spacing of points in longitude. Recommend describing resolution as a number value followed by units. Examples: '100 meters', '0.1 degree'</td>
 					<td class="report" valign="top">metadata/geospatialCoverage/eastwest/resolution</td>
@@ -1502,7 +1502,7 @@
 						<xsl:with-param name="score" select="$geospatial_lat_unitsCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#geospatial_lat_units_Attribute">geospatial_lat_units</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#geospatial_lat_units">geospatial_lat_units</a>
 						<br/>
 					</td>
                                         <td class="report alert alert-info">Units for the latitude axis described in "geospatial_lat_min" and "geospatial_lat_max" attributes. These are presumed to be "degree_north"; other options from udunits may be specified instead.</td>
@@ -1514,7 +1514,7 @@
 						<xsl:with-param name="score" select="$geospatial_lat_resolutionCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#geospatial_lat_resolution_Attribute">geospatial_lat_resolution</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#geospatial_lat_resolution">geospatial_lat_resolution</a>
 					</td>
                                         <td class="report alert alert-info">Information about the targeted spacing of points in latitude. Recommend describing resolution as a number value followed by the units. Examples: '100 meters', '0.1 degree'.</td>
 					<td class="report" valign="top">metadata/geospatialCoverage/northsouth/resolution</td>
@@ -1525,7 +1525,7 @@
 						<xsl:with-param name="score" select="$vertical_unitsCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#geospatial_vertical_units_Attribute">geospatial_vertical_units</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#geospatial_vertical_units">geospatial_vertical_units</a>
 						<br/>
 					</td>
                                         <td class="report alert alert-info">Units for the vertical axis described in "geospatial_vertical_min" and "geospatial_vertical_max" attributes. The default is EPSG:4979 (height above the ellipsoid, in meters); other vertical coordinate reference systems may be specified. Note that the common oceanographic practice of using pressure for a vertical coordinate, while not strictly a depth, can be specified using the unit bar. Examples: 'EPSG:5829' (instantaneous height above sea level), 'EPSG:5831' (instantaneous depth below sea level).</td>
@@ -1537,7 +1537,7 @@
 						<xsl:with-param name="score" select="$vertical_resolutionCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#geospatial_vertical_resolution_Attribute">geospatial_vertical_resolution</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#geospatial_vertical_resolution">geospatial_vertical_resolution</a>
 						<br/>
 					</td>
                                         <td class="report alert alert-info">Information about the targeted vertical spacing of points. Example: '25 meters'</td>
@@ -1548,7 +1548,7 @@
 						<xsl:with-param name="score" select="$vertical_positiveCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#geospatial_vertical_positive_Attribute">geospatial_vertical_positive</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#geospatial_vertical_positive">geospatial_vertical_positive</a>
 						<br/>
 					</td>
                                         <td class="report alert alert-info">One of 'up' or 'down'. If up, vertical values are interpreted as 'altitude', with negative values corresponding to below the reference datum (e.g., under water). If down, vertical values are interpreted as 'depth', positive values correspond to below the reference datum. Note that if geospatial_vertical_positive is down ('depth' orientation), the geospatial_vertical_min attribute specifies the data's vertical location furthest from the earth's center, and the geospatial_vertical_max attribute specifies the location closest to the earth's center.</td>
@@ -1574,7 +1574,7 @@
 						<xsl:with-param name="score" select="$creatorAckCnt"/>
 					</xsl:call-template>
 					<td class="report alert alert-info" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#acknowledgement_Attribute">acknowledgment</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#acknowledgement">acknowledgment</a>
 					</td>
 					<td class="report alert alert-info" valign="top">A place to acknowledge various type of support for the project that produced this data.<br/></td>
 					<td class="report alert alert-info" valign="top">metadata/documentation[@type="funding"]</td>
@@ -1585,7 +1585,7 @@
 						<xsl:with-param name="score" select="$creatorNameCnt"/>
 					</xsl:call-template>
 					<td class="report alert alert-info" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#creator_name_Attribute">creator_name</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#creator_name">creator_name</a>
 						<br/>
 					</td>
 					<td class="report alert alert-info" rowspan="5" colspan="1" valign="top">The data creator's name, URL, and email. The "institution" attribute will be used if the "creator_name" attribute does not exist.<br/></td>
@@ -1598,7 +1598,7 @@
 						<xsl:with-param name="score" select="$creatorURLCnt"/>
 					</xsl:call-template>
 					<td class="report alert alert-info" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#creator_url_Attribute">creator_url</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#creator_url">creator_url</a>
 						<br/>
 					</td>
 					<td class="report alert alert-info" valign="top">metadata/creator/contact@url<br/></td>
@@ -1610,7 +1610,7 @@
 						<xsl:with-param name="score" select="$creatorEmailCnt"/>
 					</xsl:call-template>
 					<td class="report alert alert-info" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#creator_email_Attribute">creator_email</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#creator_email">creator_email</a>
 						<br/>
 					</td>
 					<td class="report alert alert-info" valign="top">metadata/creator/contact@email</td>
@@ -1622,7 +1622,7 @@
 						<xsl:with-param name="score" select="$creatorInstCnt"/>
 					</xsl:call-template>
 					<td class="report alert alert-info" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#institution_Attribute">institution</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#institution">institution</a>
 						<br/>
 					</td>
 					<td class="report alert alert-info" valign="top">metadata/creator/name</td>
@@ -1633,7 +1633,7 @@
 						<xsl:with-param name="score" select="$creatorInstitutionCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#institution_Attribute">creator_institution</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#institution">creator_institution</a>
 						<br/>
 					</td>
 					<td class="report" valign="top">metadata/creator/name</td>
@@ -1645,7 +1645,7 @@
 						<xsl:with-param name="score" select="$creatorDateCnt"/>
 					</xsl:call-template>
 					<td class="report alert alert-info" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#date_created_Attribute">date_created</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#date_created">date_created</a>
 					</td>
 					<td class="report alert alert-info" valign="top">The date on which the data was created.<br/></td>
 					<td class="report alert alert-info" valign="top">metadata/date[@type="created"]</td>
@@ -1656,7 +1656,7 @@
 						<xsl:with-param name="score" select="$creatorProjCnt"/>
 					</xsl:call-template>
 					<td class="report alert alert-info" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#project_Attribute">project</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#project">project</a>
 						<br/>
 					</td>
 					<td class="report alert alert-info" valign="top">The scientific project that produced the data.<br/></td>
@@ -1681,7 +1681,7 @@
 						<xsl:with-param name="score" select="$modifiedDateCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#date_modified_Attribute">date_modified</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#date_modified">date_modified</a>
 						<br/>
 					</td>
 					<td class="report" valign="top">The date on which this data was last modified.<br/></td>
@@ -1694,7 +1694,7 @@
 						<xsl:with-param name="score" select="$metadataModifiedDateCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#date_metadata_modified_Attribute">date_metadata_modified</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#date_metadata_modified">date_metadata_modified</a>
 						<br/>
 					</td>
 					<td class="report" valign="top">The date on which this data was last modified.<br/></td>
@@ -1706,7 +1706,7 @@
 						<xsl:with-param name="score" select="$issuedDateCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#date_issued_Attribute">date_issued</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#date_issued">date_issued</a>
 						<br/>
 					</td>
 					<td class="report" valign="top">The date on which this data was formally issued.<br/></td>
@@ -1732,7 +1732,7 @@
 						<xsl:with-param name="score" select="$contributorNameCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#contributor_name_Attribute">contributor_name</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#contributor_name">contributor_name</a>
 						<br/>
 					</td>
 					<td class="report" rowspan="2" colspan="1" valign="top">The name and role of any individuals or institutions that contributed to the creation of this data.<br/></td>
@@ -1744,7 +1744,7 @@
 						<xsl:with-param name="score" select="$contributorRoleCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#contributor_role_Attribute">contributor_role</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#contributor_role">contributor_role</a>
 						<br/>
 					</td>
 					<td class="report" valign="top">metadata/contributor@role</td>
@@ -1770,7 +1770,7 @@
 						<xsl:with-param name="score" select="$publisherNameCnt"/>
 					</xsl:call-template>
 					<td class="report alert alert-info" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#publisher_name_Attribute">publisher_name</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#publisher_name">publisher_name</a>
 						<br/>
 					</td>
 					<td class="report alert alert-info" rowspan="3" colspan="1" valign="top">The data publisher's name, URL, and email. The publisher may be an individual or an institution.</td>
@@ -1784,7 +1784,7 @@
 						<xsl:with-param name="score" select="$publisherURLCnt"/>
 					</xsl:call-template>
 					<td class="report alert alert-info" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#publisher_url_Attribute">publisher_url</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#publisher_url">publisher_url</a>
 						<br/>
 					</td>
 					<td class="report alert alert-info" valign="top">metadata/publisher/contact@url<br/></td>
@@ -1797,7 +1797,7 @@
 						<xsl:with-param name="score" select="$publisherEmailCnt"/>
 					</xsl:call-template>
 					<td class="report alert alert-info" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#publisher_email_Attribute">publisher_email</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#publisher_email">publisher_email</a>
 						<br/>
 					</td>
 					<td class="report alert alert-info" valign="top">There is no THREDDS metadata attribute for publisher email.</td>
@@ -1813,7 +1813,7 @@ and/or<br/>
 						<xsl:with-param name="score" select="$publisherTypeCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#publisher_type_Attribute">publisher_type</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#publisher_type">publisher_type</a>
 						<br/>
 					</td>
                                         <td class="report">Specifies type of publisher with one of the following: 'person', 'group', 'institution', or 'position'. If this attribute is not specified, the publisher is assumed to be a person.</td>
@@ -1826,7 +1826,7 @@ and/or<br/>
 						<xsl:with-param name="score" select="$publisherInstCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#publisher_institution_Attribute">publisher_institution</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#publisher_institution">publisher_institution</a>
 						<br/>
 					</td>
                                         <td class="report">The email address of the person (or other entity specified by the publisher_type attribute) responsible for publishing the data file or product to users, with its current metadata and format.</td>
@@ -1852,7 +1852,7 @@ and/or<br/>
 						<xsl:with-param name="score" select="$procLevelCnt"/>
 					</xsl:call-template>
 					<td class="report alert alert-info" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#processing_level_Attribute">processing_level</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#processing_level">processing_level</a>
 					</td>
 					<td class="report alert alert-info" valign="top">A textual description of the processing (or quality control) level of the data.<br/></td>
 					<td class="report alert alert-info" valign="top">metadata/documentation[@type="processing_level"]</td>
@@ -1863,7 +1863,7 @@ and/or<br/>
 						<xsl:with-param name="score" select="$licenseCnt"/>
 					</xsl:call-template>
 					<td class="report alert alert-info" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#license_Attribute">license</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#license">license</a>
 					</td>
 					<td class="report alert alert-info" valign="top">Describe the restrictions to data access and distribution. </td>
 					<td class="report alert alert-info" valign="top">metadata/documentation[@type="rights"]</td>
@@ -1875,7 +1875,7 @@ and/or<br/>
 						<xsl:with-param name="score" select="$sourceCnt"/>
 					</xsl:call-template>
 					<td class="report alert alert-info" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#source_Attribute">source</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#source">source</a>
 					</td>
 					<td class="report alert alert-info" valign="top">The method of production of the original data. If it was model-generated, source should name the model and its version. If it is observational, source should characterize it. This attribute is defined in the CF Conventions. Examples: 'temperature from CTD #1234'; 'world model v.0.1'.</td>
 					<td class="report alert alert-info" valign="top">There is no THREDDS metadata attribute for source.</td>
@@ -1886,7 +1886,7 @@ and/or<br/>
 						<xsl:with-param name="score" select="$cdmTypeCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#cdm_data_type_Attribute">cdm_data_type</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#cdm_data_type">cdm_data_type</a>
 						<br/>
 					</td>
 					<td class="report" valign="top">The <a href="http://www.unidata.ucar.edu/projects/THREDDS/tech/catalog/InvCatalogSpec.html#dataType">THREDDS data type</a> appropriate for this dataset.</td>
@@ -1900,7 +1900,7 @@ and/or<br/>
 						<xsl:with-param name="score" select="$instrumentTypeCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#instrument_type_Attribute">instrument</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#instrument_type">instrument</a>
 						<br/>
 					</td>
 					<td class="report" valign="top">Name of the contributing instrument(s) or sensor(s) used to create this data set or product. Indicate controlled vocabulary used in instrument_vocabulary.</td>
@@ -1913,7 +1913,7 @@ and/or<br/>
 						<xsl:with-param name="score" select="$instrumentVocabCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#instrument_vocabulary_Attribute">instrument_vocabulary</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#instrument_vocabulary">instrument_vocabulary</a>
 						<br/>
 					</td>
 					<td class="report" valign="top">Controlled vocabulary for the names used in the "instrument" attribute.</td>
@@ -1926,7 +1926,7 @@ and/or<br/>
 						<xsl:with-param name="score" select="$platformCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#platform_Attribute">platform</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#platform">platform</a>
 						<br/>
 					</td>
 					<td class="report" valign="top">Name of the platform(s) that supported the sensor data used to create this data set or product. Platforms can be of any type, including satellite, ship, station, aircraft or other. Indicate controlled vocabulary used in platform_vocabulary.</td>
@@ -1939,7 +1939,7 @@ and/or<br/>
 						<xsl:with-param name="score" select="$productVersionCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#product_version_Attribute">product_version</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#product_version">product_version</a>
 						<br/>
 					</td>
 					<td class="report" valign="top">Version identifier of the data file or product as assigned by the data creator. For example, a new algorithm or methodology could result in a new product_version.</td>
@@ -1952,7 +1952,7 @@ and/or<br/>
 						<xsl:with-param name="score" select="$programCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#program_Attribute">program</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#program">program</a>
 						<br/>
 					</td>
 					<td class="report" valign="top">The overarching program(s) of which the dataset is a part. A program consists of a set (or portfolio) of related and possibly interdependent projects that meet an overarching objective. Examples: 'GHRSST', 'NOAA CDR', 'NASA EOS', 'JPSS', 'GOES-R'.</td>
@@ -1965,7 +1965,7 @@ and/or<br/>
 						<xsl:with-param name="score" select="$referencesCnt"/>
 					</xsl:call-template>
 					<td class="report" valign="top">
-						<a href="http://www.unidata.ucar.edu/software/netcdf-java/formats/DataDiscoveryAttConvention.html#references_Attribute">references</a>
+						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#references">references</a>
 						<br/>
 					</td>
 					<td class="report" valign="top">Published or web-based references that describe the data or methods used to produce it. Recommend URIs (such as a URL or DOI) for papers or other references. This attribute is defined in the CF conventions.</td>
@@ -1977,7 +1977,7 @@ and/or<br/>
 			
 			<hr/>
 			Rubric Version: <xsl:value-of select="$rubricVersion"/><br/>
-			<a href="https://geo-ide.noaa.gov/wiki/index.php?title=NetCDF_Attribute_Convention_for_Dataset_Discovery">More Information</a>			
+			<a href="https://geo-ide.noaa.gov/wiki/index.php?title=NetCDF_Convention_for_Dataset_Discovery">More Information</a>			
 		</html>
 	</xsl:template>
 </xsl:stylesheet>
