@@ -740,8 +740,8 @@
             </xsl:otherwise>            
           </xsl:choose>
         </xsl:variable>         
-		<xsl:variable name="creatorTotal" select="$creatorNameCnt + $creatorURLCnt + $creatorEmailCnt + $creatorDateCnt + $creatorTypeCnt + $creatorInstitutionCnt + $modifiedDateCnt + $issuedDateCnt + $creatorInstCnt + $creatorProjCnt + $creatorAckCnt"/>
-		<xsl:variable name="creatorMax">11</xsl:variable>
+		<xsl:variable name="creatorTotal" select="$creatorNameCnt + $creatorURLCnt + $creatorEmailCnt + $creatorDateCnt + $creatorTypeCnt + $creatorInstitutionCnt + $modifiedDateCnt + $issuedDateCnt + $creatorInstCnt + $creatorProjCnt + $creatorAckCnt + $metadataModifiedDateCnt"/>
+		<xsl:variable name="creatorMax">12</xsl:variable>
 		<!--  -->
 		<xsl:variable name="contributorNameCnt">
           <xsl:choose>            
@@ -830,8 +830,8 @@
             </xsl:otherwise>
           </xsl:choose>
         </xsl:variable>         
-		<xsl:variable name="publisherTotal" select="$publisherNameCnt + $publisherURLCnt + $publisherEmailCnt"/>
-		<xsl:variable name="publisherMax">3</xsl:variable>
+		<xsl:variable name="publisherTotal" select="$publisherNameCnt + $publisherURLCnt + $publisherEmailCnt + $publisherTypeCnt + $publisherInstCnt"/>
+		<xsl:variable name="publisherMax">5</xsl:variable>
 		<!--  -->
 		<xsl:variable name="responsiblePartyTotal" select="$creatorTotal + $contributorTotal + $publisherTotal"/>
 		<xsl:variable name="responsiblePartyMax">16</xsl:variable>
@@ -963,8 +963,8 @@
             </xsl:otherwise>
           </xsl:choose>
         </xsl:variable>        	
-		<xsl:variable name="otherTotal" select="$cdmTypeCnt + $procLevelCnt + $licenseCnt"/>
-		<xsl:variable name="otherMax">3</xsl:variable>
+		<xsl:variable name="otherTotal" select="$cdmTypeCnt + $procLevelCnt + $licenseCnt + $cdmTypeCnt + $instrumentTypeCnt + $instrumentVocabCnt + $platformCnt + $productVersionCnt + $programCnt + $referencesCnt"/>
+		<xsl:variable name="otherMax">10</xsl:variable>
 		
 		<xsl:variable name="spiralTotal" select="$identifierTotal + $textSearchTotal + $extentTotal + $otherExtentTotal + $otherTotal + $responsiblePartyTotal"/>
 		<xsl:variable name="spiralMax" select="$identifierMax + $otherMax + $textSearchMax + $creatorMax + $extentMax + $responsiblePartyMax"/>
