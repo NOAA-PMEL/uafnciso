@@ -70,57 +70,57 @@
         <dependency>
             <groupId>edu.ucar</groupId>
             <artifactId>cdm</artifactId>
-            <version>4.6.0-SNAPSHOT</version>
+            <version>4.6.8</version>
             <scope>compile</scope>
         </dependency>
 
         <dependency>
             <groupId>edu.ucar</groupId>
-            <artifactId>thredds</artifactId>
-            <version>4.3.9-SNAPSHOT</version>
-            <scope>compile</scope>
+            <artifactId>thredds-parent</artifactId>
+            <version>4.6.8</version>
+            <type>pom</type>
         </dependency>
 
 
         <dependency>
             <groupId>edu.ucar</groupId>
             <artifactId>bufr</artifactId>
-            <version>4.6.0-SNAPSHOT</version>
+            <version>4.6.8</version>
             <scope>runtime</scope>
         </dependency>
 
         <dependency>
             <groupId>edu.ucar</groupId>
             <artifactId>clcommon</artifactId>
-            <version>4.6.0-SNAPSHOT</version>
+            <version>4.6.8</version>
             <scope>runtime</scope>
         </dependency>
 
         <dependency>
             <groupId>edu.ucar</groupId>
             <artifactId>grib</artifactId>
-            <version>4.6.0-SNAPSHOT</version>
+            <version>4.6.8</version>
             <scope>runtime</scope>
         </dependency>
 
         <dependency>
             <groupId>edu.ucar</groupId>
             <artifactId>netcdf4</artifactId>
-            <version>4.6.0-SNAPSHOT</version>
+            <version>4.6.8</version>
             <scope>runtime</scope>
         </dependency>
 
         <dependency>
             <groupId>edu.ucar</groupId>
             <artifactId>opendap</artifactId>
-            <version>4.6.0-SNAPSHOT</version>
+            <version>4.6.8</version>
             <scope>runtime</scope>
         </dependency>
 
         <dependency>
             <groupId>edu.ucar</groupId>
             <artifactId>visadCdm</artifactId>
-            <version>4.6.0-SNAPSHOT</version>
+            <version>4.6.8</version>
             <scope>runtime</scope>
         </dependency>
         <!-- End NetCDF All -->
