@@ -20,8 +20,8 @@ public class WafService {
 
 	private static Logger logger = Logger.getLogger(WafService.class); 
 
-    private static final String _xsltMetadataAssessmentUrl = "http://www.ngdc.noaa.gov/metadata/published/xsl/nciso1.2/UnidataDDCount-HTML.xsl";
-    private static final String _xsltIsoUrl = "http://www.ngdc.noaa.gov/metadata/published/xsl/nciso1.2/UnidataDD2MI.xsl";
+    private static final String _xsltMetadataAssessmentUrl = "https://www.ngdc.noaa.gov/metadata/published/xsl/nciso1.2/UnidataDDCount-HTML.xsl";
+    private static final String _xsltIsoUrl = "https://www.ngdc.noaa.gov/metadata/published/xsl/nciso1.2/UnidataDD2MI.xsl";
     
     public static Vector<String> generateNcml(final Vector<MetadataContainer> mdcs, final Vector<String> ncmlFiles, final String wafRoot){
 		FileUtility wafNcmlDir = new FileUtility(wafRoot);
