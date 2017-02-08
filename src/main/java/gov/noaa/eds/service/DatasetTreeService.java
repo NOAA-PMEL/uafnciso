@@ -36,8 +36,8 @@ import org.jdom.Element;
 public class DatasetTreeService {
 	private static Logger logger = Logger.getLogger(DatasetTreeService.class);  
 	
-    private static final String _xsltMetadataAssessmentUrl = "https://cdn.rawgit.com/noaaroland/uafnciso/master/transforms/UnidataDDCount-HTML.xsl";
-    private static final String _xsltIsoUrl = "https://cdn.rawgit.com/noaaroland/uafnciso/master/transforms/UnidataDD2MI.xsl";
+    private static final String _xsltMetadataAssessmentUrl = "https://cdn.rawgit.com/NOAA-PMEL/uafnciso/master/transforms/UnidataDDCount-HTML.xsl";
+    private static final String _xsltIsoUrl = "https://cdn.rawgit.com/NOAA-PMEL/master/transforms/UnidataDD2MI.xsl";
     private String _xsltFilePath = null;
     private String _threddsServer = null;  
     ThreddsDatasetTree root;
