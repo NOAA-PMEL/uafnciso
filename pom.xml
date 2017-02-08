@@ -62,65 +62,71 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-jdk14</artifactId>
-            <version>1.7.5</version>
-            <scope>runtime</scope>
+            <version>1.7.7</version>
+            <scope>compile</scope>
         </dependency>
-        <!-- NetCDF All -->
 
+        <!-- NetCDF All -->
         <dependency>
             <groupId>edu.ucar</groupId>
             <artifactId>cdm</artifactId>
-            <version>4.6.0-SNAPSHOT</version>
+            <version>4.6.8</version>
             <scope>compile</scope>
         </dependency>
 
         <dependency>
             <groupId>edu.ucar</groupId>
-            <artifactId>thredds</artifactId>
-            <version>4.3.9-SNAPSHOT</version>
+            <artifactId>thredds-parent</artifactId>
+            <version>4.6.8</version>
+            <type>pom</type>
             <scope>compile</scope>
         </dependency>
 
-
+        <dependency>
+            <groupId>edu.ucar</groupId>
+            <artifactId>tdm</artifactId>
+            <version>4.6.8</version>
+            <scope>compile</scope>
+        </dependency>
         <dependency>
             <groupId>edu.ucar</groupId>
             <artifactId>bufr</artifactId>
-            <version>4.6.0-SNAPSHOT</version>
+            <version>4.6.8</version>
             <scope>runtime</scope>
         </dependency>
 
         <dependency>
             <groupId>edu.ucar</groupId>
             <artifactId>clcommon</artifactId>
-            <version>4.6.0-SNAPSHOT</version>
+            <version>4.6.8</version>
             <scope>runtime</scope>
         </dependency>
 
         <dependency>
             <groupId>edu.ucar</groupId>
             <artifactId>grib</artifactId>
-            <version>4.6.0-SNAPSHOT</version>
+            <version>4.6.8</version>
             <scope>runtime</scope>
         </dependency>
 
         <dependency>
             <groupId>edu.ucar</groupId>
             <artifactId>netcdf4</artifactId>
-            <version>4.6.0-SNAPSHOT</version>
+            <version>4.6.6</version>
             <scope>runtime</scope>
         </dependency>
 
         <dependency>
             <groupId>edu.ucar</groupId>
             <artifactId>opendap</artifactId>
-            <version>4.6.0-SNAPSHOT</version>
+            <version>4.6.8</version>
             <scope>runtime</scope>
         </dependency>
 
         <dependency>
             <groupId>edu.ucar</groupId>
             <artifactId>visadCdm</artifactId>
-            <version>4.6.0-SNAPSHOT</version>
+            <version>4.6.8</version>
             <scope>runtime</scope>
         </dependency>
         <!-- End NetCDF All -->
@@ -161,7 +167,11 @@
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.7</version>
+        </dependency>
 
 
     </dependencies>
