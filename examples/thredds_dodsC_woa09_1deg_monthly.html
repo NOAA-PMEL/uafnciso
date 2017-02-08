@@ -523,9 +523,10 @@
 <td valign="top" class="report alert alert-info">
 <a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#time_coverage_resolution">time_coverage_resolution</a>
 </td>
-<td class="report alert alert-info">Describes the targeted time period between each value in the data set. Use ISO 8601:2004 duration format.</td>
+<td class="report alert alert-info">Describes the targeted time period between each value in the data set. Use ISO 8601:2004 duration format. N.B. the ISO value is an interger with units, so a conversion must be done.</td>
 <td valign="top" class="report alert alert-info">metadata/timeCoverage/resolution</td>
-<td class="report alert alert-info">N/A</td>
+<td class="report alert alert-info">"/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/gml:timeInterval
+                                            WHERE: /gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/gml:timeInterval[@unit=""units""]"</td>
 </tr>
 <tr class="report">
 <td align="center" class="report alert alert-success">1</td>
