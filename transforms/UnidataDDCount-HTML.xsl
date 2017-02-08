@@ -37,7 +37,7 @@
 				<xsl:when test="$total=0">0</xsl:when>
 				<xsl:when test="$total=$max">4</xsl:when>
 				<xsl:otherwise>
-					<xsl:value-of select="floor(number(number($total) * 3 div number($max)))+1"/>
+					<xsl:value-of select="floor(number(number($total) * 3 div number($max))) + 1"/>
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
@@ -1674,7 +1674,7 @@
 					</td>
 					<td class="report" valign="top">Specifies type of creator with one of the following: 'person', 'group', 'institution', or 'position'. If this attribute is not specified, the creator is assumed to be a person.<br/></td>
 					<td class="report" valign="top">metadata</td>
-					<td class="report" valign="top">Unknown</td>
+					<td class="report" valign="top">N/A</td>
 				</tr>
 				<tr class="report">
 					<xsl:call-template name="showScore">
@@ -1818,7 +1818,7 @@ and/or<br/>
 					</td>
                                         <td class="report">Specifies type of publisher with one of the following: 'person', 'group', 'institution', or 'position'. If this attribute is not specified, the publisher is assumed to be a person.</td>
 					<td class="report" valign="top">There is no THREDDS metadata attribute for publisher type.</td>
-					<td class="report" valign="top">Unknown</td>
+					<td class="report" valign="top">N/A</td>
 				</tr>
 				<tr class="report">
 					<xsl:call-template name="showScore">
@@ -1829,9 +1829,10 @@ and/or<br/>
 						<a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3#publisher_institution">publisher_institution</a>
 						<br/>
 					</td>
-                                        <td class="report">The email address of the person (or other entity specified by the publisher_type attribute) responsible for publishing the data file or product to users, with its current metadata and format.</td>
+                    <td class="report">The email address of the person (or other entity specified by the publisher_type attribute) responsible for publishing the data file or product to users, with its current metadata and format.</td>
 					<td class="report" valign="top">There is no THREDDS metadata attribute for publisher institution.</td>
-					<td class="report" valign="top"> Unknown</td>
+					<td class="report" valign="top">"/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString
+                        WHERE: /gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode = ""publisher"""</td>
 				</tr>
 			</table>
 			<a href="#Identification">Identification</a> | <a href="#Text Search">Text Search</a> | <a href="#Extent Search">Extent Search</a> | <a href="#Other Extent Information">Other Extent Information</a> | <a href="#Creator Search">Creator Search</a> | <a href="#Contributor Search">Contributor Search</a> | <a href="#Publisher">Publisher Search</a> | <a href="#Other Attributes">Other Attributes</a>		
@@ -1856,7 +1857,7 @@ and/or<br/>
 					</td>
 					<td class="report alert alert-info" valign="top">A textual description of the processing (or quality control) level of the data.<br/></td>
 					<td class="report alert alert-info" valign="top">metadata/documentation[@type="processing_level"]</td>
-					<td class="report alert alert-info" valign="top">Unknown</td>
+					<td class="report alert alert-info" valign="top">/gmi:MI_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage/gmd:LI_Lineage/gmd:processStep/gmi:LE_ProcessStep/gmi:output/gmi:LE_Source/gmi:processedLevel/gmd:MD_Identifier/gmd:code/gco:CharacterString</td>
 				</tr>
 				<tr class="report">
 					<xsl:call-template name="showScore">
@@ -1879,7 +1880,7 @@ and/or<br/>
 					</td>
 					<td class="report alert alert-info" valign="top">The method of production of the original data. If it was model-generated, source should name the model and its version. If it is observational, source should characterize it. This attribute is defined in the CF Conventions. Examples: 'temperature from CTD #1234'; 'world model v.0.1'.</td>
 					<td class="report alert alert-info" valign="top">There is no THREDDS metadata attribute for source.</td>
-					<td class="report alert alert-info" valign="top">Unknown</td>
+					<td class="report alert alert-info" valign="top">/gmi:MI_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage/gmd:LI_Lineage/gmd:processStep/gmi:LE_ProcessStep/gmd:source/gmi:LE_Source/gmd:description/gco:CharacterString</td>
 				</tr>
 				<tr class="report">
 					<xsl:call-template name="showScore">
@@ -1905,7 +1906,8 @@ and/or<br/>
 					</td>
 					<td class="report" valign="top">Name of the contributing instrument(s) or sensor(s) used to create this data set or product. Indicate controlled vocabulary used in instrument_vocabulary.</td>
 					<td class="report" valign="top">There is no THREDDS metadata attribute for instrument.</td>
-					<td class="report" valign="top">Unknown</td>
+					<td class="report" valign="top">"/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/gco:CharacterString
+                        WHERE: gmd:MD_KeywordTypeCode = 'instrument' "</td>
 				</tr>
 				<tr class="report">
 					<xsl:call-template name="showScore">
@@ -1918,7 +1920,7 @@ and/or<br/>
 					</td>
 					<td class="report" valign="top">Controlled vocabulary for the names used in the "instrument" attribute.</td>
 					<td class="report" valign="top">There is no THREDDS metadata attribute for instrument vocabulary.</td>
-					<td class="report" valign="top">Unknown</td>
+					<td class="report" valign="top">//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString</td>
 				</tr>
 				<tr class="report">
 					<xsl:call-template name="showScore">
@@ -1931,7 +1933,8 @@ and/or<br/>
 					</td>
 					<td class="report" valign="top">Name of the platform(s) that supported the sensor data used to create this data set or product. Platforms can be of any type, including satellite, ship, station, aircraft or other. Indicate controlled vocabulary used in platform_vocabulary.</td>
 					<td class="report" valign="top">There is no THREDDS metadata attribute for platform.</td>
-					<td class="report" valign="top">Unknown</td>
+					<td class="report" valign="top">"/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/gco:CharacterString
+                        WHERE: gmd:MD_KeywordTypeCode = 'platform' "</td>
 				</tr>
 				<tr class="report">
 					<xsl:call-template name="showScore">
@@ -1944,7 +1947,8 @@ and/or<br/>
 					</td>
 					<td class="report" valign="top">Version identifier of the data file or product as assigned by the data creator. For example, a new algorithm or methodology could result in a new product_version.</td>
 					<td class="report" valign="top">There is no THREDDS metadata attribute for product version.</td>
-					<td class="report" valign="top">Unknown</td>
+					<td class="report" valign="top">"/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/gco:CharacterString
+                        WHERE: gmd:MD_KeywordTypeCode = 'platform' "</td>
 				</tr>
 				<tr class="report">
 					<xsl:call-template name="showScore">
@@ -1957,7 +1961,8 @@ and/or<br/>
 					</td>
 					<td class="report" valign="top">The overarching program(s) of which the dataset is a part. A program consists of a set (or portfolio) of related and possibly interdependent projects that meet an overarching objective. Examples: 'GHRSST', 'NOAA CDR', 'NASA EOS', 'JPSS', 'GOES-R'.</td>
 					<td class="report" valign="top">There is no THREDDS metadata attribute for program.</td>
-					<td class="report" valign="top">Unknown</td>
+					<td class="report" valign="top">"/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/gco:CharacterString
+                        WHERE: gmd:MD_KeywordTypeCode = 'project' "</td>
 				</tr>
 				<tr class="report">
 					<xsl:call-template name="showScore">
@@ -1970,7 +1975,7 @@ and/or<br/>
 					</td>
 					<td class="report" valign="top">Published or web-based references that describe the data or methods used to produce it. Recommend URIs (such as a URL or DOI) for papers or other references. This attribute is defined in the CF conventions.</td>
 					<td class="report" valign="top">There is no THREDDS metadata attribute for references`.</td>
-					<td class="report" valign="top">Unknown</td>
+					<td class="report" valign="top">/gmi:MI_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:title/gco:CharacterString</td>
 				</tr>
 			</table>
 			<a href="#Identification">Identification</a> | <a href="#Text Search">Text Search</a> | <a href="#Extent Search">Extent Search</a> | <a href="#Other Extent Information">Other Extent Information</a> | <a href="#Creator Search">Creator Search</a> | <a href="#Contributor Search">Contributor Search</a> | <a href="#Publisher">Publisher Search</a> | <a href="#Other Attributes">Other Attributes</a>		

@@ -18,10 +18,11 @@ import org.jdom.Element;
 
 public class WafService {
 
-	private static Logger logger = Logger.getLogger(WafService.class); 
+	private static Logger logger = Logger.getLogger(WafService.class);
 
-    private static final String _xsltMetadataAssessmentUrl = "https://www.ngdc.noaa.gov/metadata/published/xsl/nciso1.2/UnidataDDCount-HTML.xsl";
-    private static final String _xsltIsoUrl = "https://www.ngdc.noaa.gov/metadata/published/xsl/nciso1.2/UnidataDD2MI.xsl";
+	// rawgit is a CDN for github hosted files.
+	private static final String _xsltMetadataAssessmentUrl = "https://cdn.rawgit.com/noaaroland/uafnciso/master/transforms/UnidataDDCount-HTML.xsl";
+	private static final String _xsltIsoUrl = "https://cdn.rawgit.com/noaaroland/uafnciso/master/transforms/UnidataDD2MI.xsl";
     
     public static Vector<String> generateNcml(final Vector<MetadataContainer> mdcs, final Vector<String> ncmlFiles, final String wafRoot){
 		FileUtility wafNcmlDir = new FileUtility(wafRoot);
