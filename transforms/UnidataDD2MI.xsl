@@ -1014,24 +1014,56 @@
           <gmd:citation>
             <gmd:CI_Citation>
               <gmd:title>
-                <!-- Netcdf takes precedence -->
+                <!--
+                If there is only one variable in the file, add the variable long name to the title.
+                Makes for better titles in cases of catalogs with gobs of single variable files with the same global title attribute.
+                Variable selection for adding the long name depends on the data variable being listed first in the NCML which seems to be the case.
+                -->
+
                 <xsl:choose>
-                  <xsl:when test="/nc:netcdf/nc:attribute[@name='title']">
-                    <xsl:call-template name="writeCharacterString">
-                      <xsl:with-param name="testValue" select="$titleCnt"/>
-                      <xsl:with-param name="stringToWrite"
-                        select="/nc:netcdf/nc:attribute[@name='title']/@value"/>
-                    </xsl:call-template>
+                  <xsl:when test="$variableCnt - $dimensionCnt &gt; 1">
+                    <!-- Netcdf takes precedence -->
+                    <xsl:choose>
+                      <xsl:when test="/nc:netcdf/nc:attribute[@name='title']">
+                        <xsl:call-template name="writeCharacterString">
+                          <xsl:with-param name="testValue" select="$titleCnt"/>
+                          <xsl:with-param name="stringToWrite"
+                                          select="/nc:netcdf/nc:attribute[@name='title']/@value"/>
+                        </xsl:call-template>
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <xsl:call-template name="writeCharacterString">
+                          <xsl:with-param name="testValue" select="$titleCnt"/>
+                          <xsl:with-param name="stringToWrite"
+                                          select="/nc:netcdf/nc:group[@name='THREDDSMetadata']/nc:attribute[@name='full_name']/@value"
+                          />
+                        </xsl:call-template>
+                      </xsl:otherwise>
+                    </xsl:choose>
                   </xsl:when>
                   <xsl:otherwise>
-                    <xsl:call-template name="writeCharacterString">
-                      <xsl:with-param name="testValue" select="$titleCnt"/>
-                      <xsl:with-param name="stringToWrite"
-                        select="/nc:netcdf/nc:group[@name='THREDDSMetadata']/nc:attribute[@name='full_name']/@value"
-                      />
-                    </xsl:call-template>
+                    <!-- Netcdf takes precedence -->
+                    <xsl:choose>
+                      <xsl:when test="/nc:netcdf/nc:attribute[@name='title']">
+                        <xsl:call-template name="writeCharacterString">
+                          <xsl:with-param name="testValue" select="$titleCnt"/>
+                          <xsl:with-param name="stringToWrite"
+                                          select="concat(/nc:netcdf/nc:attribute[@name='title']/@value,' ',/nc:netcdf/nc:variable/nc:attribute[@name='long_name']/@value)"/>
+                        </xsl:call-template>
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <xsl:call-template name="writeCharacterString">
+                          <xsl:with-param name="testValue" select="$titleCnt"/>
+                          <xsl:with-param name="stringToWrite"
+                                          select="/nc:netcdf/nc:group[@name='THREDDSMetadata']/nc:attribute[@name='full_name']/@value"
+                          />
+                        </xsl:call-template>
+                      </xsl:otherwise>
+                    </xsl:choose>
                   </xsl:otherwise>
                 </xsl:choose>
+
+
               </gmd:title>
               <xsl:choose>
                 <xsl:when test="$dateCnt">
@@ -1942,7 +1974,8 @@
                           <gmd:description>
                             <gco:CharacterString>This URL provides a standard OPeNDAP html interface
                               for selecting data from this dataset. Change the extension to .info
-                              for a description of the dataset.</gco:CharacterString>
+                              for a description of the dataset.
+                            </gco:CharacterString>
                           </gmd:description>
                           <gmd:function>
                             <gmd:CI_OnLineFunctionCode
