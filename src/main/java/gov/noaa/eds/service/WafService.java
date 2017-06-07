@@ -20,9 +20,9 @@ public class WafService {
 
 	private static Logger logger = Logger.getLogger(WafService.class);
 
-	// rawgit is a CDN for github hosted files.
-	private static final String _xsltMetadataAssessmentUrl = "https://cdn.rawgit.com/NOAA-PMEL/uafnciso/master/transforms/UnidataDDCount-HTML.xsl";
-	private static final String _xsltIsoUrl = "https://cdn.rawgit.com/NOAA-PMEL/uafnciso/master/transforms/UnidataDD2MI.xsl";
+	// rawgit is a CDN for github hosted files. The URL includes a commit tag since the CDN cache is immutable, so the master CDN version never changes even if the file does.
+	private static final String _xsltMetadataAssessmentUrl = "https://cdn.rawgit.com/NOAA-PMEL/uafnciso/fdb7f86515c21a8b5c087978975addf9ad5d0027/transforms/UnidataDDCount-HTML.xsl";
+	private static final String _xsltIsoUrl = "https://cdn.rawgit.com/noaaroland/uafnciso/e84d6e26b87a799eb996173358c72ec7a4ed4912/transforms/UnidataDD2MI.xsl";
     
     public static Vector<String> generateNcml(final Vector<MetadataContainer> mdcs, final Vector<String> ncmlFiles, final String wafRoot){
 		FileUtility wafNcmlDir = new FileUtility(wafRoot);

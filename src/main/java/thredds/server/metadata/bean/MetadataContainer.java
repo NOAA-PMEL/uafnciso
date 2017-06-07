@@ -48,7 +48,9 @@ public class MetadataContainer {
 			if(additionalServiceTypes.contains(access.getService().getServiceType())){
 				int pos = access.getStandardUrlName().indexOf("/", 7);
 				String serviceBaseUrl = access.getStandardUrlName().substring(0,pos) + access.getService().getBase() + access.getUrlPath();
-				if (access.getService().getServiceType().equals(ServiceType.OPENDAP)) _map.put(access.getService().getServiceType().toString().toLowerCase(), access.getStandardUrlName().replace("http", "dods"));
+//				if (access.getService().getServiceType().equals(ServiceType.OPENDAP)) _map.put(access.getService().getServiceType().toString().toLowerCase(), access.getStandardUrlName().replace("http", "dods"));
+				// Don't use dods:// it's outdated. Keep http or https
+				if (access.getService().getServiceType().equals(ServiceType.OPENDAP)) _map.put(access.getService().getServiceType().toString().toLowerCase(), access.getStandardUrlName());
 				if (access.getService().getServiceType().equals(ServiceType.WMS)) _map.put(access.getService().getServiceType().toString().toLowerCase(), serviceBaseUrl + "?service=WMS&version=1.3.0&request=GetCapabilities");
 				if (access.getService().getServiceType().equals(ServiceType.WCS)) _map.put(access.getService().getServiceType().toString().toLowerCase(), serviceBaseUrl + "?service=WCS&version=1.0.0&request=GetCapabilities");
 				if (access.getService().getServiceType().equals(ServiceType.NetcdfSubset)) _map.put(access.getService().getServiceType().toString().toLowerCase(), serviceBaseUrl);
