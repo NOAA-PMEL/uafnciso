@@ -160,13 +160,21 @@
             <scope>compile</scope>
         </dependency>
         -->
+        <!-- upgrade which introduces independent jdom dependency. -->
         <dependency>
             <groupId>jaxen</groupId>
             <artifactId>jaxen</artifactId>
-            <version>1.1.1</version>
+            <version>1.1.6</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/jdom/jdom -->
+        <dependency>
+            <groupId>jdom</groupId>
+            <artifactId>jdom</artifactId>
+            <version>1.1</version>
+        </dependency>
+
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
