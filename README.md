@@ -30,6 +30,6 @@ Specify a large number for a translation of all content.
 
 Example: 
 
-Crawl NOAA's NGDC THREDDS catalog and generate metadata: 
+Crawl small example NOAA catalog and generate metadata: 
 
-java -Xms1024m -Xmx1024m -jar ncISO-2.3.4.jar -ts v http://ferret.pmel.noaa.gov/pmel/thredds/carbontracker.xml -num 1 -depth 20 -iso true
+java -Xms1024m -Xmx1024m -jar ncISO-2.3.5.jar -ts http://ferret.pmel.noaa.gov/pmel/thredds/carbontracker.xml -num 1 -depth 20 -iso true
