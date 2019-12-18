@@ -1320,11 +1320,10 @@
               <gmd:MD_Keywords>
                 <xsl:choose>
                   <xsl:when test="count(/nc:netcdf/nc:attribute[@name='keywords']) > 0">
-                    <gmd:keyword>
-                      <gco:CharacterString>
-                        <xsl:value-of select="/nc:netcdf/nc:attribute[@name='keywords']/@value"/>
-                      </gco:CharacterString>
-                    </gmd:keyword>
+                      <!-- use a template to split the comma separated values. -->
+                      <xsl:call-template name="split">
+                        <xsl:with-param name="pText" select="/nc:netcdf/nc:attribute[@name='keywords']/@value"/>
+                      </xsl:call-template>
                   </xsl:when>
                   <xsl:otherwise>
                     <xsl:for-each
@@ -2036,6 +2035,21 @@
         </gmd:MD_MaintenanceInformation>
       </gmd:metadataMaintenance>
     </gmi:MI_Metadata>
+  </xsl:template>
+  <!-- parse comma separated keyword string into separate gmd:keyword elements -->
+  <xsl:template match="text()" name="split">
+    <xsl:param name="pText" select="."/>
+    <xsl:if test="string-length($pText) > 0">
+      <xsl:variable name="vNextItem" select="substring-before(concat($pText, ','), ',')"/>
+      <gmd:keyword>
+      <gco:CharacterString>
+        <xsl:value-of select="$vNextItem"/>
+      </gco:CharacterString>
+      </gmd:keyword>
+      <xsl:call-template name="split">
+        <xsl:with-param name="pText" select="substring-after($pText, ',')"/>
+      </xsl:call-template>
+    </xsl:if>
   </xsl:template>
   <xsl:template name="writeCodelist">
     <xsl:param name="codeListName"/>
