@@ -36,8 +36,8 @@ import org.jdom.Element;
 public class DatasetTreeService {
 	private static Logger logger = Logger.getLogger(DatasetTreeService.class);  
 	// See WafService
-    private static final String _xsltMetadataAssessmentUrl = "https://cdn.rawgit.com/NOAA-PMEL/uafnciso/fdb7f86515c21a8b5c087978975addf9ad5d0027/transforms/UnidataDDCount-HTML.xsl";
-    private static final String _xsltIsoUrl = "https://cdn.rawgit.com/noaaroland/uafnciso/e84d6e26b87a799eb996173358c72ec7a4ed4912/transforms/UnidataDD2MI.xsl";
+    private static final String _xsltMetadataAssessmentUrl = "https://cdn.jsdelivr.net/gh/NOAA-PMEL/uafnciso@fdb7f86515c21a8b5c087978975addf9ad5d0027/transforms/UnidataDDCount-HTML.xsl";
+    private static final String _xsltIsoUrl = "https://cdn.jsdelivr.net/gh/NOAA-PMEL/uafnciso@a9f3dceb0dbc092f8d7f5153ceeb58af2d30edc4/transforms/UnidataDD2MI.xsl";
 
 	private String _xsltFilePath = null;
     private String _threddsServer = null;  
