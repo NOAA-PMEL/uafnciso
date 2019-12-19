@@ -806,6 +806,16 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:variable>
+  <xsl:variable name="sourceCnt">
+    <xsl:choose>
+      <xsl:when test="count(/nc:netcdf/nc:attribute[@name='source']) > 0">
+        <xsl:value-of select="count(/nc:netcdf/nc:attribute[@name='source'])"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="0"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
   <xsl:variable name="procLevelCnt">
     <xsl:choose>
       <xsl:when test="count(/nc:netcdf/nc:attribute[@name='processing_level']) > 0">
@@ -827,7 +837,7 @@
   <xsl:variable name="licenseCnt">
     <xsl:choose>
       <xsl:when test="count(/nc:netcdf/nc:attribute[@name='license']) > 0">
-        <xsl:value-of select="count(/nc:netcdf/nc:attribute[@name='processing_level'])"/>
+        <xsl:value-of select="count(/nc:netcdf/nc:attribute[@name='license'])"/>
       </xsl:when>
       <xsl:otherwise>
         <xsl:choose>
@@ -853,6 +863,7 @@
   <!--                        -->
   <!--    Write ISO Metadata  -->
   <!--                        -->
+
   <xsl:template match="/">
     <gmi:MI_Metadata>
       <xsl:attribute name="xsi:schemaLocation">
@@ -2006,6 +2017,22 @@
             </gmd:scope>
             <gmd:lineage>
               <gmd:LI_Lineage>
+                <!-- netCDF CF source attribute -->
+                <xsl:if test="$sourceCnt > 0">
+                <gmd:processStep>
+                   <gmi:LE_ProcessStep>
+                      <gmd:source>
+                         <gmi:LE_Source>
+                            <gmd:description>
+                               <gco:CharacterString>
+                                 <xsl:value-of select="/nc:netcdf/nc:attribute[@name='source']/@value"/>
+                               </gco:CharacterString>
+                            </gmd:description>
+                         </gmi:LE_Source>
+                      </gmd:source>
+                   </gmi:LE_ProcessStep>
+                </gmd:processStep>
+                </xsl:if>
                 <gmd:statement>
                   <gco:CharacterString>
                     <xsl:choose>
