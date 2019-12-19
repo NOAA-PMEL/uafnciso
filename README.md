@@ -38,7 +38,7 @@ Try:
 
 java -Xms1024m -Xmx1024m -jar ncISO-2.3.6.jar -ts http://amb6400b.stccmop.org:8080/thredds/forecast_model_data.xml -num 125 -depth 100 -iso true
 
-to see the new for 2.3.6 individual <gmd:keyword> elements from the comma-separated GCMD keywords in the keywords and the netCDF source attribute put into the <gmi:LE_ProcessStep><gmd:source><gmi:LE_Source><gmd:description>.
+to see the new for 2.3.6 individual &lt;gmd:keyword&gt elements from the comma-separated GCMD keywords in the keywords and the netCDF source attribute put into the &lt;gmi:LE_ProcessStep&gt;&lt;gmd:source&gt;&lt;gmi:LE_Source&gt;&lt;gmd:description&gt;.
 
 #### Legal Disclaimer
 *This repository is a software product and is not official communication
