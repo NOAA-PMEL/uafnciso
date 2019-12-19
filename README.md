@@ -32,7 +32,7 @@ Example:
 
 Crawl small example NOAA catalog and generate metadata: 
 
-java -Xms1024m -Xmx1024m -jar ncISO-2.3.5.jar -ts https://ferret.pmel.noaa.gov/pmel/thredds/carbontracker.xml -num 1 -depth 20 -iso true
+java -Xms1024m -Xmx1024m -jar ncISO-2.3.6.jar -ts https://ferret.pmel.noaa.gov/pmel/thredds/carbontracker.xml -num 1 -depth 20 -iso true
 
 #### Legal Disclaimer
 *This repository is a software product and is not official communication
