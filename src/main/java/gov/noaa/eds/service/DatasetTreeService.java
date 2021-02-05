@@ -4,6 +4,8 @@ package gov.noaa.eds.service;
 import gov.noaa.eds.threddsutilities.service.iface.ICatalogCrawler;
 import gov.noaa.eds.threddsutilities.service.impl.CatalogCrawlerImpl;
 import gov.noaa.eds.util.FileUtility;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import thredds.server.metadata.bean.Extent;
 import thredds.server.metadata.bean.MetadataContainer;
 import thredds.server.metadata.bean.ThreddsDatasetTree;
@@ -20,7 +22,6 @@ import java.util.Enumeration;
 import java.util.List;
 import java.util.Vector;
 
-import org.apache.log4j.Logger;
 import org.jdom.Element;
 
 
@@ -34,7 +35,7 @@ import org.jdom.Element;
 
 	
 public class DatasetTreeService {
-	private static Logger logger = Logger.getLogger(DatasetTreeService.class);  
+	private static Logger logger = LoggerFactory.getLogger(DatasetTreeService.class.getName());
 	// See WafService
     private static final String _xsltMetadataAssessmentUrl = "https://cdn.jsdelivr.net/gh/NOAA-PMEL/uafnciso@fdb7f86515c21a8b5c087978975addf9ad5d0027/transforms/UnidataDDCount-HTML.xsl";
     private static final String _xsltIsoUrl = "https://cdn.jsdelivr.net/gh/NOAA-PMEL/uafnciso@a9f3dceb0dbc092f8d7f5153ceeb58af2d30edc4/transforms/UnidataDD2MI.xsl";
@@ -317,7 +318,7 @@ public class DatasetTreeService {
                 try {
                   getNodes(tree);
                 } catch (Exception e) {
-                	logger.error(e);
+                	logger.error(e.getMessage());
                 }
             } 
             fu.writeln("");
@@ -325,7 +326,7 @@ public class DatasetTreeService {
             // write json footer
             fu.writeln("]}");
         } catch (Exception e) {
-        	logger.error(e);
+        	logger.error(e.getMessage());
 
         } finally {
             fu.close();

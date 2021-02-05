@@ -1,11 +1,11 @@
 package gov.noaa.eds.util;
 
+import org.apache.commons.io.DirectoryWalker;
+import org.apache.commons.io.FileUtils;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Collection;
-
-import org.apache.commons.io.DirectoryWalker;
-import org.apache.commons.io.FileUtils;
 
 public class FileTraverser extends DirectoryWalker {
 

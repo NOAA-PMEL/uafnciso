@@ -6,6 +6,8 @@ import gov.noaa.eds.threddsutilities.service.iface.ICatalogCrawler;
 import gov.noaa.eds.threddsutilities.service.impl.CatalogCrawlerImpl;
 import gov.noaa.eds.util.StackTraceUtil;
 import gov.noaa.eds.util.WafScoreCalculator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import thredds.server.metadata.bean.MetadataContainer;
 import thredds.server.metadata.exception.ThreddsUtilitiesException;
 
@@ -13,13 +15,11 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Vector;
 
-import org.apache.log4j.Logger;
-
 
 //-ts http://dods.ndbc.noaa.gov/thredds/dodsC/data/oceansites/catalog.xml -num 1 -iso true
 public class ServiceController {
    
-	private static Logger logger = Logger.getLogger(ServiceController.class);
+	private static Logger logger = LoggerFactory.getLogger(ServiceController.class);
 
 	/**
 	 * Create Wafs
@@ -70,7 +70,7 @@ public class ServiceController {
             treeService.setServer(tsUrl, sampleNum, depth, isoExtract, customExtract, xsltFile);
             treeService.generateTree();
         } catch (Exception e) {
-        	logger.error(e);
+        	logger.error(e.getMessage());
         }
     }
     

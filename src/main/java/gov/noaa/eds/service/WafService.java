@@ -34,13 +34,9 @@ public class WafService {
             	String urlSrcRoot = urlStr.substring(startPos+1, urlStr.lastIndexOf("/")+1);
             	String baseFileNm = urlStr.substring(urlStr.lastIndexOf("/")+1, urlStr.length());
             	String ncmlFileStr = urlSrcRoot.replace('/', '_') + baseFileNm;
-            	int pos = ncmlFileStr.indexOf(".");            	
-            	if (pos>-1) { //file
-            		ncmlFileStr = ncmlFileStr.substring(0, pos) + ".xml";
-            	} else { //aggregation
-            		ncmlFileStr = ncmlFileStr + ".xml";
-                }
-            	
+            	int pos = ncmlFileStr.indexOf(".");
+				ncmlFileStr = ncmlFileStr + ".xml";
+
             	String ncmlFilePath  = wafRoot + ncmlFileStr;
             	logger.info("ncmlFilePath=" + ncmlFilePath);
 				File ncmlFile = ThreddsTranslatorUtil.getNcml(urlStr, ncmlFilePath);
