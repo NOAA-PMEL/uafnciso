@@ -1,5 +1,7 @@
 package gov.noaa.eds.threddsutilities.service.impl;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import thredds.server.metadata.bean.MetadataContainer;
 import thredds.server.metadata.exception.ThreddsUtilitiesException;
 import gov.noaa.eds.threddsutilities.service.iface.ICatalogCrawler;
@@ -7,8 +9,6 @@ import thredds.catalog.*;
 
 import java.util.List;
 import java.util.Vector;
-
-import org.apache.log4j.Logger;
 
 /**
  * CatalogCrawlerImpl
@@ -19,7 +19,7 @@ import org.apache.log4j.Logger;
  * @author dneufeld
  */
 public class CatalogCrawlerImpl implements ICatalogCrawler {
-	private static Logger logger = Logger.getLogger(CatalogCrawlerImpl.class); 
+	private static Logger logger = LoggerFactory.getLogger(CatalogCrawlerImpl.class);
     private static  Vector<ServiceType> allowableTypes = new Vector<ServiceType>(0);
     private InvDataset lastParent = null;
     
@@ -35,7 +35,6 @@ public class CatalogCrawlerImpl implements ICatalogCrawler {
 
     
     
-    @Override
     public synchronized void crawlThredds(String url, int maxDepth, int maxLeaves, Vector<MetadataContainer> mdcs) throws ThreddsUtilitiesException {
     	
         InvCatalogFactory factory = new InvCatalogFactory("default",true);
@@ -66,8 +65,8 @@ public class CatalogCrawlerImpl implements ICatalogCrawler {
     
     /**
      * Recursively walks through datasets add urls of the dataset's subset catalog
-     * @param ds
-     * @param urls
+     * @param dataset
+     * @param mdcs
      * @param maxDepth
      * @param maxLeaves
      * @throws ThreddsUtilitiesException 

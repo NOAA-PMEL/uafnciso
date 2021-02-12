@@ -1,12 +1,8 @@
 package thredds.server.metadata.bean;
 
-import gov.noaa.eds.service.WafService;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Vector;
-
-import org.apache.log4j.Logger;
 
 import thredds.catalog.InvAccess;
 import thredds.catalog.InvDataset;

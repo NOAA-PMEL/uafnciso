@@ -1,5 +1,8 @@
 package gov.noaa.eds.util;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
@@ -10,10 +13,8 @@ import java.io.Writer;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import org.apache.log4j.Logger;
-
 public class FileUtility {
-	private static Logger logger = Logger.getLogger(FileUtility.class);  	
+	private static Logger logger = LoggerFactory.getLogger(FileUtility.class);
 
 	private Writer writer = null;
 	private File file = null;
@@ -58,10 +59,10 @@ public class FileUtility {
       	  writer = new BufferedWriter(new FileWriter(file));	
        	  return true;
       } catch (FileNotFoundException fnfe) {
-       	  logger.error(fnfe);
+       	  logger.error(fnfe.getMessage());
     	  return false;        	
       } catch (IOException ioe) {
-          logger.error(ioe);
+          logger.error(ioe.getMessage());
           close();
           return false;        	
       }	
@@ -72,7 +73,7 @@ public class FileUtility {
     	  writer.write(text + "\n");        
     	  return true;
       } catch (IOException ioe) {
-    	  logger.error(ioe);
+    	  logger.error(ioe.getMessage());
           close();
     	  return false;        	
       }	     
@@ -85,7 +86,7 @@ public class FileUtility {
         return true;
       } catch (IOException e)
       {
-        logger.error(e);
+        logger.error(e.getMessage());
         close();
       	return false;        	
       }	     
@@ -101,7 +102,7 @@ public class FileUtility {
         }
       } catch (IOException e)
       {
-    	  logger.error(e);
+    	  logger.error(e.getMessage());
       }
     	
     }

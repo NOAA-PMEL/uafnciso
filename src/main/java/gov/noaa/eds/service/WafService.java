@@ -1,5 +1,7 @@
 package gov.noaa.eds.service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import thredds.server.metadata.bean.Extent;
 import thredds.server.metadata.bean.MetadataContainer;
 import thredds.server.metadata.util.ElementNameComparator;
@@ -13,12 +15,11 @@ import java.io.File;
 import java.util.List;
 import java.util.Vector;
 
-import org.apache.log4j.Logger;
 import org.jdom.Element;
 
 public class WafService {
 
-	private static Logger logger = Logger.getLogger(WafService.class);
+	private static Logger logger = LoggerFactory.getLogger(WafService.class);
 
 	// rawgit is a CDN for github hosted files. The URL includes a commit tag since the CDN cache is immutable, so the master CDN version never changes even if the file does.
 	private static final String _xsltMetadataAssessmentUrl = "https://cdn.rawgit.com/NOAA-PMEL/uafnciso/fdb7f86515c21a8b5c087978975addf9ad5d0027/transforms/UnidataDDCount-HTML.xsl";
@@ -34,7 +35,6 @@ public class WafService {
             	String urlSrcRoot = urlStr.substring(startPos+1, urlStr.lastIndexOf("/")+1);
             	String baseFileNm = urlStr.substring(urlStr.lastIndexOf("/")+1, urlStr.length());
             	String ncmlFileStr = urlSrcRoot.replace('/', '_') + baseFileNm;
-            	int pos = ncmlFileStr.indexOf(".");
 				ncmlFileStr = ncmlFileStr + ".xml";
 
             	String ncmlFilePath  = wafRoot + ncmlFileStr;
@@ -63,7 +63,7 @@ public class WafService {
 				}
             }
         } catch (Exception e) {
-        	logger.error(e);
+        	logger.error(e.getMessage());
         }
         return ncmlFiles;
     }
@@ -78,7 +78,7 @@ public class WafService {
             	ThreddsTranslatorUtil.transform(_xsltMetadataAssessmentUrl, ncmlFilePathStr, wafDirStr + reportFileNm);
             }
         } catch (Exception e) {
-        	logger.error(e);
+        	logger.error(e.getMessage());
         }
     }
 
@@ -92,7 +92,7 @@ public class WafService {
             	ThreddsTranslatorUtil.transform(_xsltIsoUrl, ncmlFilePathStr, wafDirStr + reportFileNm);
             }
         } catch (Exception e) {
-        	logger.error(e);
+        	logger.error(e.getMessage());
         }
     }
     

@@ -3,9 +3,10 @@ package gov.noaa.eds.service;
 import gov.noaa.eds.threddsutilities.service.iface.ICatalogCrawler;
 import gov.noaa.eds.threddsutilities.service.impl.CatalogCrawlerImpl;
 
-import org.apache.log4j.Logger;
 import org.junit.Test;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import thredds.server.metadata.bean.MetadataContainer;
 import static org.junit.Assert.*;
 
@@ -21,8 +22,7 @@ import java.util.Vector;
 
 public class WafServiceTest  {
 
-	private static org.slf4j.Logger _log = org.slf4j.LoggerFactory
-    .getLogger(WafServiceTest.class);
+	private static Logger _log = LoggerFactory.getLogger(WafServiceTest.class);
     //TDSs
     private static final String _hdayCatalog = "catalog=http://thredds1.pfeg.noaa.gov/thredds/Hfradar/aggreghfradarCS" +
             "/u25h/catalog.xml&amp;dataset=satellite/CS/u25h/hday";
