@@ -25,20 +25,20 @@ Specify a large number for a translation of all content.
 –custom: signals to the crawler to translate the NCML using a custom stylesheet.
 
 
-–xslt: XSLT_FILENAME located in an xslt subfolder.
+–xsl: XSLT_FILENAME located in an xsl subfolder.
 
 
 Example: 
 
 Crawl small example NOAA catalog and generate metadata: 
 
-java -Xms1024m -Xmx1024m -jar ncISO-2.3.6.jar -ts https://ferret.pmel.noaa.gov/pmel/thredds/carbontracker.xml -num 1 -depth 20 -iso true
+java -Xms1024m -Xmx1024m -jar ncISO-2.3.7.jar -ts https://ferret.pmel.noaa.gov/pmel/thredds/carbontracker.xml -num 1 -depth 20 -iso true
 
-Try:
+Add a sub-directory called xsl with a file MYXSL.xsl, and run
 
-java -Xms1024m -Xmx1024m -jar ncISO-2.3.6.jar -ts http://amb6400b.stccmop.org:8080/thredds/forecast_model_data.xml -num 125 -depth 100 -iso true
+java -Xms1024m -Xmx1024m -jar ncISO-2.3.7.jar -ts https://ferret.pmel.noaa.gov/pmel/thredds/carbontracker.xml -num 1 -depth 20 -iso true -custom true -xsl MYXSL.xsl
 
-to see the new for 2.3.6 individual &lt;gmd:keyword&gt; elements from the comma-separated GCMD keywords in the keywords and the netCDF source attribute put into the &lt;gmi:LE_ProcessStep&gt;&lt;gmd:source&gt;&lt;gmi:LE_Source&gt;&lt;gmd:description&gt;.
+will produce an output file _META.xml along side your _ISO.xml output file.
 
 #### Legal Disclaimer
 *This repository is a software product and is not official communication
