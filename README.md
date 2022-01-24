@@ -38,7 +38,7 @@ Add a sub-directory called xsl with a file MYXSL.xsl, and run
 
 java -Xms1024m -Xmx1024m -jar ncISO-2.3.7.jar -ts https://ferret.pmel.noaa.gov/pmel/thredds/carbontracker.xml -num 1 -depth 20 -iso true -custom true -xsl MYXSL.xsl
 
-will produce an output file _META.xml along side your _ISO.xml output file.
+This command will produce an output file _META.xml along side your _ISO.xml output file. The _META.xml file will contain the results of applying MYXSL.xsl.
 
 #### Legal Disclaimer
 *This repository is a software product and is not official communication
