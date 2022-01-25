@@ -34,7 +34,7 @@ Crawl small example NOAA catalog and generate metadata:
 
 java -Xms1024m -Xmx1024m -jar ncISO-2.3.7.jar -ts https://ferret.pmel.noaa.gov/pmel/thredds/carbontracker.xml -num 1 -depth 20 -iso true
 
-Add a sub-directory called xsl with a file MYXSL.xsl, and run
+Add a sub-directory called xsl with a file MYXSL.xsl (for example), and run
 
 java -Xms1024m -Xmx1024m -jar ncISO-2.3.7.jar -ts https://ferret.pmel.noaa.gov/pmel/thredds/carbontracker.xml -num 1 -depth 20 -iso true -custom true -xsl MYXSL.xsl
 
