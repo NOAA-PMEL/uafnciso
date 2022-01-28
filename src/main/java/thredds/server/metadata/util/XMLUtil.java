@@ -67,6 +67,8 @@ public class XMLUtil {
     */	
 	public XMLUtil(final String fileName) {
 		SAXBuilder saxBuilder = new SAXBuilder();
+		// https://github.com/advisories/GHSA-2363-cqg2-863c
+		saxBuilder.setExpandEntities(false);
         try {				    
 		    _doc = saxBuilder.build(fileName);
         } catch (JDOMException jde) {
@@ -82,7 +84,9 @@ public class XMLUtil {
 	* @param inputstream an input stream of XML parse
 	*/	
 	public XMLUtil(InputStream is) {
+		// https://github.com/advisories/GHSA-2363-cqg2-863c
 		SAXBuilder saxBuilder = new SAXBuilder();
+		saxBuilder.setExpandEntities(false);
         try {				   
 		    _doc = saxBuilder.build(is);
         } catch (JDOMException jde) {
@@ -161,7 +165,7 @@ public class XMLUtil {
 		try {
 			x = XPath.newInstance(xPathExpr);
 			x.addNamespace(prefix, nameSpace);
-			List<Element> list = x.selectNodes(_doc);
+			List<Element> list = (List<Element>) x.selectNodes(_doc);
 			return list;
 		} catch (JDOMException e) {
 			_log.error("JDOMException in XMLUtil: ", e);
